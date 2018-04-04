@@ -17,6 +17,10 @@ class ArticlesController < ApplicationController
       render :new
     end
   end
+  
+  def show
+    @article = Article.find_by(params[:id])
+  end
 
   private
 
