@@ -3,7 +3,9 @@
     <h1 style="text-align:center"><%= @article.title %></h1>
     <div class="well well-lg">
       <p><%= @article.body %></p>
-      <p><%= link_to "Edit", edit_article_path(@article) %></p>
+      <p><%= link_to "Edit", edit_article_path(@article), class: "btn btn-primary btn-lg btn-space" %> | <%= link_to "Delete",
+                             article_path(@article), method: :delete, data: { confirm: "Are you sure?" },
+                             class: "btn btn-primary btn-lg btn-space" %></p>
     </div>
   </div>
 </div>
